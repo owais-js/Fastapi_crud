@@ -11,7 +11,7 @@ from sqlalchemy import pool
 from alembic import context
 from app.core.database import Base
 from dotenv import load_dotenv
-from app.models import *
+from app.models import todo
 import os
 
 load_dotenv()
@@ -45,7 +45,6 @@ if config.config_file_name is not None:
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
 target_metadata = Base.metadata
-print(Base.metadata.tables.keys())
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:
