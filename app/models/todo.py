@@ -6,5 +6,5 @@ class Todo(Base):
     __tablename__ = "todos"
 
     id = Column(Integer, primary_key=True, index=True)
-    title = Column(String, nullable=False)
-    description = Column(String, nullable=True)
+    title = Column(String(50), nullable=False)
+    description = Column(String(250), nullable=True)
